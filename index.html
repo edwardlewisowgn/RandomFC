@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Club Generator</title>
+</head>
+<body>
+    <h1>Football Club Generator</h1>
+    <button onclick="generateClub()">Generate Club</button>
+    <p id="club"></p>
+
+    <script>
+        function generateClub() {
+            var clubs = [
+                "Real Madrid",
+                "Manchester United",
+                "FC Barcelona",
+                "Bayern Munich",
+                "Liverpool FC",
+                "Paris Saint-Germain",
+                "Juventus FC",
+                "Chelsea FC",
+                "Manchester City",
+                "AC Milan",
+                "Ajax Amsterdam",
+                "Borussia Dortmund"
+            ];
+
+            var randomIndex = Math.floor(Math.random() * clubs.length);
+            var randomClub = clubs[randomIndex];
+
+            var clubElement = document.getElementById("club");
+            clubElement.textContent = randomClub;
+        }
+    </script>
+</body>
+</html>
